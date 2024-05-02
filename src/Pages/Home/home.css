@@ -1,0 +1,14 @@
+body {
+  background-color: #02BAEE;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.ContainerHome{
+  display: flex;
+  align-items: center;
+}
+
+.formHome{
+  display: block;
+  align-items: center;
+}
