@@ -4,10 +4,15 @@ import imageHome from "../../imagens/imageHome.png";
 
 const Home  = () => {
     return(
+
+
     <div className="ContainerHome">
-            <div className="imageHome">
-                <img src={imageHome}></img>
-            </div>
+
+        <section className="sectionHome">
+            
+        <div className="imageHome">
+                <img src={imageHome} className="imagehome"></img>
+        </div>
         <div className="formHome">
             <div>
                 <h1>Olá</h1>
@@ -24,6 +29,9 @@ const Home  = () => {
                 <button>Login</button>
              </div>
         </div>
+
+        </section>
+
     </div>
 
     )
