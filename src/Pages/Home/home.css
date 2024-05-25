@@ -80,6 +80,7 @@ body{
     outline: 0;
 }
 .pLogin2{
+    margin: 20px 0 0;
     font-size: 0.7em;
     text-align: center;
 }
@@ -95,7 +96,14 @@ body{
     justify-content: center;
 }
 
-.buttonLogin{
+
+
+.linkbutton{
+    text-decoration: none ;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 50%;
     background-color: #0C4F6C;
     border: none;
