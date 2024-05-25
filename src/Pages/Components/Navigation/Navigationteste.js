@@ -1,5 +1,12 @@
 import "./nav.css";
 import { FaBars } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
+import { MdAssessment } from "react-icons/md";
+import { IoSettingsSharp } from "react-icons/io5";
+import { FaUserCircle } from "react-icons/fa";
+
+
+
 
 function Navigationteste() {
     return (
@@ -8,36 +15,31 @@ function Navigationteste() {
         <div className="BodyNav">
             <nav className="menu-lateral">
                 <div className="btn-expandir">
-                    <i className="bi bi-list" id="btn-exp"><FaBars/></i>
+                    <i id="btn-exp"><FaBars/></i>
                 </div>
                 <ul className="ulNav">
                     <li className="item-menu ativo">
                         <a className="aLinkNav" href="#">
-                            <span className="icon"><i> </i></span>
+                            <span className="icon"> <FaHome className="home"/></span>
                             <span className="txt-link">Home</span>
                         </a>
                     </li>
                     <li className="item-menu">
                         <a className="aLinkNav" href="#">
-                            <span className="icon"><i className="bi bi-columns-gap"></i></span>
+                            <span className="icon"><MdAssessment /></span>
                             <span className="txt-link">Dashboard</span>
                         </a>
                     </li>
+                  
                     <li className="item-menu">
                         <a className="aLinkNav" href="#">
-                            <span className="icon"><i className="bi bi-calendar3"></i></span>
-                            <span className="txt-link">Agenda</span>
-                        </a>
-                    </li>
-                    <li className="item-menu">
-                        <a className="aLinkNav" href="#">
-                            <span className="icon"><i className="bi bi-gear"></i></span>
+                            <span className="icon"><IoSettingsSharp/></span>
                             <span className="txt-link">Configurações</span>
                         </a>
                     </li>
                     <li className="item-menu">
                         <a className="aLinkNav" href="#">
-                            <span className="icon"><i className="bi bi-person-circle"></i></span>
+                            <span className="icon"><FaUserCircle /></span>
                             <span className="txt-link">Conta</span>
                         </a>
                     </li>

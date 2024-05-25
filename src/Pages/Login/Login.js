@@ -1,9 +1,8 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import "./home.css"
-import imageHome from "../../imagens/imageHome.png";
+import "./login.css"
 
-const Home  = () => {
+const Login  = () => {
     return(
 <body className="bodyhome">
     <section className="sectionHome">
@@ -37,4 +36,4 @@ const Home  = () => {
 
     )
 }
-export default Home;
+export default Login;

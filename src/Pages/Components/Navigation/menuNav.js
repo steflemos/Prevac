@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-// import "./nav.css";
 
 import Navigationteste from "./Navigationteste";
 
