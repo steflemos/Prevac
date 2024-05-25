@@ -1,7 +1,6 @@
 import React from "react";
 import Home from "../Pages/Home/Home";
-import Cadastro from "../Pages/Cadastro";
-import Navigation from "../Pages/Components/nav";
+import Navigation from "../Pages/Components/Navigation/menuNav";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 const AppRoutes = () => {
