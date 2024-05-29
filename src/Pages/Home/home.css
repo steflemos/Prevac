@@ -58,10 +58,9 @@
 } */
 
 .landingPage{
-    height: 80vh;
+    height: 100vh;
     width: 100%;
     margin: 0;
-    padding: 10% 0 5% 0;
     display: flex;
     width: 100%;
     align-items: center;
