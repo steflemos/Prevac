@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import Navigationteste from "./Navigationteste";
+import Navigationteste from "./NavigationComponent";
 
 const Navigation = () => {
     useEffect(() => {
