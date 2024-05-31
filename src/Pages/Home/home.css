@@ -120,9 +120,57 @@
 }
 
 
-/* footer {
-    background-color: #0066cc;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-} */
+/* sessão 3 */
+
+
+.Main-Section3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.producao-aulas {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.image-container {
+width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ImageLaptop{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.content-container {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.Title-section3 {
+    font-family: "Abel", sans-serif;
+    color: #000;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.sub-title-section3 {
+    font-family: "Abel", sans-serif;
+    line-height: 1.7;
+    font-weight: 500;
+    color: #555;
+    font-size: 1.2em;
+    padding: 0 40px 0 0;
+}
+

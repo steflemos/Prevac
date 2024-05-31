@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import imgHome from "./images/people2.png";
+import laptop from "./images/laptop.png"
 import LogoPrevac from "./images/logoPrevac.png"
 import Cards from "./components/cards/Cards";
 import "./home.css";
@@ -32,8 +33,9 @@ function Home() {
             <p className="sub-titleHome">Nossa missão é assegurar a saúde e integridade
                  física dos colaboradores, além de proteger a empresa 
                  de possíveis penalizações.</p>
-                 
-            <button className="buttonLandingPage">FAÇA PARTE</button>
+
+                 <Link to='/configuracoes' className="buttonLandingPage">FAÇA PARTE</Link>
+
         </div>
         <div className="imglandingpage">
             <img src={imgHome} alt="People"  className="people" />
@@ -42,10 +44,18 @@ function Home() {
     </section>
     {/* Componente de cards */}
     <Cards/>
-    <footer>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been...</p>
-        <button>FALE CONOSCO</button>
-    </footer>
+    <main className="Main-Section3">
+        <section className="producao-aulas">
+            <div className="image-container">
+                  <img src={laptop} alt="Ilustração de laptop" className="ImageLaptop" />
+            </div>
+            <div className="content-container">
+                <h1 className="Title-section3">Lorem ipsum dolor sit amet </h1>
+                <p className="sub-title-section3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci mollitia necessitatibus quaerat repellat, impedit laborum sapiente tempora veritatis quibusdam, autem iusto ipsum. Nulla sed amet, illum quas consectetur qui distinctio!</p>
+                <p className="sub-title-section3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci mollitia necessitatibus quaerat repellat, impedit laborum sapiente tempora veritatis quibusdam, autem iusto ipsum. Nulla sed amet, illum quas consectetur qui distinctio!</p>
+            </div>
+        </section>
+    </main>
 </body>
 </>
     );
