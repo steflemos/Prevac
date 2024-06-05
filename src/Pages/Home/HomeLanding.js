@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import imgHome from "./images/people2.png";
-import laptop from "./images/laptop.png"
+import laptop from "./images/laptop.png";
+import grafic from "./images/grafic.png"
 import LogoPrevac from "./images/logoPrevac.png"
 import Cards from "./components/cards/Cards";
 import "./home.css";
@@ -56,6 +57,19 @@ function Home() {
             </div>
         </section>
     </main>
+    <main className="Main-Section4">
+        <section className="producao-aulas2">
+            <div className="content-container">
+                <h1 className="Title-section4">Lorem ipsum dolor sit amet </h1>
+                <p className="sub-title-section4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci mollitia necessitatibus quaerat repellat, impedit laborum sapiente tempora veritatis quibusdam, autem iusto ipsum. Nulla sed amet, illum quas consectetur qui distinctio!</p>
+                <p className="sub-title-section4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci mollitia necessitatibus quaerat repellat, impedit laborum sapiente tempora veritatis quibusdam, autem iusto ipsum. Nulla sed amet, illum quas consectetur qui distinctio!</p>
+            </div>
+            <div className="image-container">
+                  <img src={grafic} alt="Ilustração de laptop" className="ImageLaptop2" />
+            </div>
+        </section>
+    </main>
+    
 </body>
 </>
     );

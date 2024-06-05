@@ -26,7 +26,6 @@ const Navigation = () => {
             menuSide.classList.toggle('expandir');
         });
 
-        // Cleanup function to remove event listeners
         return () => {
             menuItem.forEach((item) =>
                 item.removeEventListener('click', selectLink)
