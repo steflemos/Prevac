@@ -3,7 +3,9 @@ import imgHome from "./images/people2.png";
 import laptop from "./images/laptop.png";
 import grafic from "./images/grafic.png"
 import LogoPrevac from "./images/logoPrevac.png"
+import LogoPrevac2 from "./images/LogoPrevac2.png"
 import Cards from "./components/cards/Cards";
+import Footer from "../Components/Footer/Footer";
 import "./home.css";
 
 function Home() {
@@ -39,7 +41,7 @@ function Home() {
 
         </div>
         <div className="imglandingpage">
-            <img src={imgHome} alt="People"  className="people" />
+            <img src={LogoPrevac2} alt="People"  className="people" />
         </div>
        
     </section>
@@ -51,17 +53,17 @@ function Home() {
                   <img src={laptop} alt="Ilustração de laptop" className="ImageLaptop" />
             </div>
             <div className="content-container">
-                <h1 className="Title-section3">Lorem ipsum dolor sit amet </h1>
-                <p className="sub-title-section3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci mollitia necessitatibus quaerat repellat, impedit laborum sapiente tempora veritatis quibusdam, autem iusto ipsum. Nulla sed amet, illum quas consectetur qui distinctio!</p>
-                <p className="sub-title-section3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci mollitia necessitatibus quaerat repellat, impedit laborum sapiente tempora veritatis quibusdam, autem iusto ipsum. Nulla sed amet, illum quas consectetur qui distinctio!</p>
+                <h1 className="Title-section3">Protegendo o Futuro da Segurança do Trabalho</h1>
+              
+                <p className="sub-title-section3">O PREVAC é um sistema de monitoramento de segurança em fábricas, usando sensores e câmeras para identificar riscos em tempo real, emitir alertas e gerar relatórios. Ele ajuda a criar um ambiente de trabalho seguro e eficiente, conforme as normas regulamentadoras, reduzindo custos e aumentando a satisfação dos funcionários.</p>
             </div>
         </section>
     </main>
     <main className="Main-Section4">
         <section className="producao-aulas2">
             <div className="content-container">
-                <h1 className="Title-section4">Lorem ipsum dolor sit amet </h1>
-                <p className="sub-title-section4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci mollitia necessitatibus quaerat repellat, impedit laborum sapiente tempora veritatis quibusdam, autem iusto ipsum. Nulla sed amet, illum quas consectetur qui distinctio!</p>
+                <h1 className="Title-section4">Como Funciona o PREVAC</h1>
+                <p className="sub-title-section4">Sistema de segurança industrial em tempo real, empregando uma sofisticada rede de sensores IoT especializados em monitoramento de temperatura e pressão.</p>
                 <p className="sub-title-section4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci mollitia necessitatibus quaerat repellat, impedit laborum sapiente tempora veritatis quibusdam, autem iusto ipsum. Nulla sed amet, illum quas consectetur qui distinctio!</p>
             </div>
             <div className="image-container">
@@ -69,6 +71,7 @@ function Home() {
             </div>
         </section>
     </main>
+    <Footer/>
     
 </body>
 </>

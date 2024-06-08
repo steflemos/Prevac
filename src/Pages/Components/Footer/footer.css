@@ -1,0 +1,14 @@
+.Container-footer{
+    background-color: #02BAEE;
+    width: 100%;
+    margin: 0;
+    padding: 45px 0;
+}
+
+.p-footer{
+    font-size: 1.2em;
+    line-height: 1.5em;
+    text-align: center;
+    font-family: "Abel", sans-serif;
+
+}
