@@ -1,237 +1,238 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
+/* Estilos gerais para a Home Landing Page */
+.HomeLandingPage {
+  font-family: "Abel", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background-image: url('../../imagens/back2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Estilos para o cabeçalho (nav) */
+.header {
+  background-color: transparent;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+}
+
+.divlogo {
+  width: 10%;
+}
+
+.logoPrevac {
+  width: 100%;
+}
+
+.optionsHeader {
+  font-family: "Abel";
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.optionSelect, .optionSelect2 {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.optionSelect2 {
+  background-color: #0066cc;
+  padding: 10px 50px;
+  border-radius: 20px;
+}
+
+/* Estilos para a seção Home Page */
 .homePage {
-    padding: 5rem 0 0.5rem 0;
+  padding: 5rem 0 0.5rem 0;
+}
+.homePage4 {
+  padding: 5rem 0 0.5rem 0;
+  background-color: #000;
+  clip-path: polygon(0 14%, 100% 0%, 100% 100%, 0 101%);
 }
 
 .container-homePage {
-    width: 100%;
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
+
+.contentHome {
+  align-items: flex-start;
+  max-width: 37rem;
+}
+
+.titleHomePage {
+  font-family: "Abel", sans-serif;
+  color: #fff;
+  font-size: 2.7rem;
+  margin-bottom: 2rem;
+  line-height: 4rem;
+}
+.titleHomePage2 {
+  font-family: "Abel", sans-serif;
+  color: #0066cc;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  line-height: 3rem;
+}
+.titleHomePage3 {
+  font-family: "Abel", sans-serif;
+  color: #ffffff;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  line-height: 3rem;
+}
+
+.descriptionPageHome{
+  font-family: "Abel", sans-serif;
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 5px 0 3rem;
+}
+.descriptionPageHome2 {
+  font-family: "Abel", sans-serif;
+  color: #000000;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  margin: 5px 0 3rem;
+}
+.descriptionPageHome3 {
+  font-family: "Abel", sans-serif;
+  color: #ffffff;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  margin: 5px 0 3rem;
+}
+.descriptionPageHome2 {
+  font-family: "Abel", sans-serif;
+  color: #000000;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  margin: 5px 0 3rem;
+}
+
+.buttonHome-a {
+  display: inline-block;
+  background-color: #0066cc;
+  padding: 12px 36px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 17px;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Abel", sans-serif;
+  transition: all 0.5s;
+}
+
 .image-containerHomePage {
-    text-align: center;
-    position: relative;
-    z-index: 10;
-}
-.imagePage {
-    img {
-      width: 570px;
-    }
-  }
-
-  .ellipse-container {
-    .ellipse {
-      z-index: -1;
-      position: absolute;
-      height: 15rem;
-      width: 15rem;
-      filter: blur(100px);
-    }
-
-    .blue {
-     width: 600px;
-     height: 500px;
-      top: 20%;
-      right: 0%;
-      background-color:#0066cc81;
-    }
-  }
-
-
-  .contentHome {
-    align-items: flex-start;
-    max-width: 37rem;
-  }
-
-  .titleHomePage {
-    font-family:  "Abel", sans-serif;
-    color: #fff;
-    font-size: 3.4rem;
-    margin-bottom: 2rem;
-    line-height: 4rem;
-  }
-
-  .descriptionPageHome {
-    font-family:  "Abel", sans-serif;
-    color: #fff;
-    font-size: 1.5rem;
-    line-height: 2.2rem;
-    margin: 10px 0px 0px;
-    margin-bottom: 3rem;
-  }
-
-  .buttonHome-a {
-    display: inline-block;
-    background-color: #0066cc;
-    padding: 12px 36px;
-    font-size: 1.2rem;
-  
-    border: none;
-    border-radius: 17px;
-    color: #fff;
-    text-decoration: none;
-    font-family:  "Abel", sans-serif;
-    transition: all 0.5s;
-  }
-
-
-/*  ------------------------------------------*/
-
-.HomeLandingPage{
-    font-family: "Abel", sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    background-image: url('./images/back2.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    /* background-attachment: fixed; */
-    background-size: cover;
+  text-align: center;
+  position: relative;
+  z-index: 10;
 }
 
-.header {
-    background-color: #00000000;
-    display: flex;
-    width: 100%;
-    justify-content:space-around;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    padding: 20px 0;
+.imagePage img {
+  width: 570px;
 }
-
-.optionsHeader{
-    font-family: 'Abel';
-    width: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    text-decoration: none;
-}
-.optionSelect{
-    text-decoration: none;
-    color: #ffffff;
-}
-.optionSelect2{
-    text-decoration: none;
-    color: #ffffff;
-    background-color: #0066cc;
-    padding: 10px 50px;
-    border-radius: 20px;
-}
-
-.divlogo{
-    width: 10%;
-}
-.logoPrevac{
-    width: 100%;
+.imagePage2 img {
+  width: 460px;
+  padding: 30px;
 }
 
 
 
-
-
-.titleHome2{
-    font-family: "Abel", sans-serif;
-    text-decoration: none !important;
-    padding: 0;
-    margin: 0;
-    font-size: 2em;
-    line-height: 1em;
-    font-weight: 200;
+/* Estilos para as seções principais (Main-Section3 e Main-Section4) */
+.Main-Section3, .Main-Section4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-
-
-/* sessão 3 */
-
-
-.Main-Section3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.Main-Section4{
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    clip-path: polygon(0 14%, 100% 0%, 100% 100%, 0 101%);
+.Main-Section4 {
+  background-color: #000;
+  clip-path: polygon(0 14%, 100% 0%, 100% 100%, 0 101%);
 }
 
-.producao-aulas {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.producao-aulas, .producao-aulas2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
+
 .producao-aulas2 {
-    padding-top: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  padding-top: 100px;
 }
 
 .image-container {
-width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.ImageLaptop{
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+.ImageLaptop, .ImageLaptop2 {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
-.ImageLaptop2{
-    width: 70%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+
+.ImageLaptop2 {
+  width: 70%;
 }
 
 .content-container {
-    width: 40%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.Title-section3, .Title-section4 {
+  font-family: "Abel", sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 20px;
 }
 
 .Title-section3 {
-    font-family: "Abel", sans-serif;
-    color: #000;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    margin-right: 25px;
+  color: #000;
+  margin-right: 25px;
 }
+
 .Title-section4 {
-    padding: 0 0 0 60px;
-    font-family: "Abel", sans-serif;
-    color: #ffffff;
-    font-size: 2.5em;
-    margin-bottom: 20px;
+  padding-left: 60px;
+  color: #ffffff;
+}
+
+.sub-title-section3, .sub-title-section4 {
+  font-family: "Abel", sans-serif;
+  line-height: 1.7;
+  font-weight: 500;
+  font-size: 1.2em;
 }
 
 .sub-title-section3 {
-    font-family: "Abel", sans-serif;
-    line-height: 1.7;
-    font-weight: 500;
-    color: #555;
-    font-size: 1.2em;
-    padding: 0 40px 0 0;
-    margin-right: 25px;
-}
-.sub-title-section4 {
-    font-family: "Abel", sans-serif;
-    line-height: 1.7;
-    font-weight: 500;
-    color: #ffffff;
-    font-size: 1.2em;
-    padding: 0 0 0 60px;
+  color: #555;
+  padding-right: 40px;
+  margin-right: 25px;
 }
 
+.sub-title-section4 {
+  color: #ffffff;
+  padding-left: 60px;
+}
+
+/* responsividade  */

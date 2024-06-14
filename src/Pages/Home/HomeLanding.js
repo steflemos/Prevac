@@ -1,9 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
-import laptop from "./images/laptop.png";
-import grafic from "./images/grafic.png"
-import LogoPrevac from "./images/logoPrevac.png"
-import LogoPrevac2 from "./images/people.png"
-import Cards from "./components/cards/Cards";
+import laptop from "../../imagens/laptop.png";
+import grafic from "../../imagens/grafic.png"
+import LogoPrevac from "../../imagens/logoPrevac.png"
+import LogoPrevac2 from "../../imagens/people.png"
+import Cards from "../Components/cards/Cards";
 import Footer from "../Components/Footer/Footer";
 import "./home.css";
 
@@ -38,7 +38,7 @@ function Home() {
                  física dos colaboradores, além de proteger a empresa 
                  de possíveis penalizações.
             </p>
-           <Link to='/Registration' className="buttonHome-a">COMEÇAR</Link>
+           <Link to='/Registration' className="buttonHome-a">FAÇA PARTE</Link>
           </div>
 
           <div className="image-containerHomePage">
@@ -56,30 +56,53 @@ function Home() {
       </section>
     {/* Componente de cards */}
     <Cards/>
-    <main className="Main-Section3">
-        <section className="producao-aulas">
-            <div className="image-container">
-                  <img src={laptop} alt="Ilustração de laptop" className="ImageLaptop" />
+  
+<section className="homePage">
+        <div className="container-homePage">
+        <div className="image-containerHomePage">
+            <div className="imagePage">
+              <img src={laptop} alt="home image" />
             </div>
-            <div className="content-container">
-                <h1 className="Title-section3">Protegendo o Futuro da Segurança do Trabalho</h1>
-              
-                <p className="sub-title-section3">O PREVAC é um sistema de monitoramento de segurança em fábricas, usando sensores e câmeras para identificar riscos em tempo real, emitir alertas e gerar relatórios. Ele ajuda a criar um ambiente de trabalho seguro e eficiente, conforme as normas regulamentadoras, reduzindo custos e aumentando a satisfação dos funcionários.</p>
+            <div className="ellipse-container">
+              <div className="ellipse blue"></div>
             </div>
-        </section>
-    </main>
-    <main className="Main-Section4">
-        <section className="producao-aulas2">
-            <div className="content-container">
-                <h1 className="Title-section4">Como Funciona o PREVAC</h1>
-                <p className="sub-title-section4">Sistema de segurança industrial em tempo real, empregando uma sofisticada rede de sensores IoT especializados em monitoramento de temperatura e pressão.</p>
-                <p className="sub-title-section4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci mollitia necessitatibus quaerat repellat, impedit laborum sapiente tempora veritatis quibusdam, autem iusto ipsum. Nulla sed amet, illum quas consectetur qui distinctio!</p>
+          </div>
+
+          <div className="contentHome">
+            <h1 className="titleHomePage2">Protegendo o Futuro da Segurança do Trabalho</h1>
+            <p className="descriptionPageHome2">
+            O PREVAC é um sistema de monitoramento de segurança em fábricas, usando sensores e câmeras para identificar riscos em tempo real, emitir alertas e gerar relatórios. 
+            Ele ajuda a criar um ambiente de trabalho seguro e eficiente, conforme as normas regulamentadoras, reduzindo custos e aumentando a satisfação dos funcionários.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+<section className="homePage4">
+        <div className="container-homePage">
+
+          <div className="contentHome">
+            <h1 className="titleHomePage3">Como Funciona o PREVAC</h1>
+            <p className="descriptionPageHome3">
+            Sistema de segurança industrial em tempo real, empregando uma sofisticada rede de sensores IoT especializados em monitoramento de temperatura e pressão.
+            </p>
+            <p className="descriptionPageHome3">
+            Sistema de segurança industrial em tempo real, empregando uma sofisticada rede de sensores IoT especializados em monitoramento de temperatura e pressão.
+            </p>
+          </div>
+
+          <div className="image-containerHomePage">
+            <div className="imagePage2">
+              <img src={grafic} alt="home image"  />
             </div>
-            <div className="image-container">
-                  <img src={grafic} alt="Ilustração de laptop" className="ImageLaptop2" />
+            <div className="ellipse-container">
+              <div className="ellipse blue"></div>
             </div>
-        </section>
-    </main>
+          </div>
+
+        </div>
+      </section>
     <Footer/>
     
 </body>
