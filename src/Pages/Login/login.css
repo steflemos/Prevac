@@ -5,7 +5,7 @@ body{
 }
 .bodyhome{
     position: relative; 
-    background-color: #02BAEE;
+    background-color: #0C4F6C;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -43,76 +43,83 @@ body{
     display: flex;
     justify-content: flex-end;
 }
-.FormHome{
 
-    height: 100%;
+
+
+/* ------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+ 
+
+  .login-form {
     border-radius: 70px  10px 70px 10px;
+    width: 50%;
     background-color: #fff;
-    width: 50%;
-}
-.Formulario{
-    padding: 30px 0 0 0;
-    font-family: "Inter", sans-serif;
-    font-size: 25px;
+    padding: 20px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .login-form h1 {
+    font-family: "Abel", sans-serif;
+    margin: 0;
+    font-size: 2em;
     color: #0C4F6C;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-}
+  }
 
-.pLogin{
-    font-size: 0.7em;
-    text-align: center;
-}
-
-.containerInputs{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-.InputFormHome{
-    margin: 10px 0px;
-    height: 30px;
-    width: 100%;
-    font-size: 17px;
-    border: none;
-    border-bottom: 2px solid #0C4F6C;
-    outline: 0;
-}
-.pLogin2{
-    margin: 20px 0 0;
-    font-size: 0.7em;
-    text-align: center;
-}
-.linkHome{
-    color: #02BAEE;
-}
-
-.DivButton{
-    margin: 50px 0;
-    width: 100%;
-    height: 50px;
+  
+  .login-form p {
+    font-family: "Abel", sans-serif;
+    margin-top: 10px;
+    font-size: 1.4em;
+    color: #666;
+  }
+  
+  .login-form form {
     display: flex;
-    justify-content: center;
-}
-
-
-
-.linkbutton{
-    text-decoration: none ;
+    flex-direction: column;
+  }
+  
+  .login-form label {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #0C4F6C;
+  }
+  
+  .login-form input {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .forgot-password {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #00bfff;
+    text-decoration: none;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  .ButtonLoginLink{
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
     background-color: #0C4F6C;
     border: none;
-    color: #fff;
-    border-radius: 50px;
-    font-size: 0.8em;
-}
-
-.buttonLogin:hover{
+    border-radius: 5px;
     cursor: pointer;
-    background-color: #126b91;
-}
+  }
+  
+  .ButtonLoginLink:hover {
+    background-color: #0e5f81;
+  }
+  

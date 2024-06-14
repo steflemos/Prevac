@@ -8,24 +8,19 @@ const Login  = () => {
     <section className="sectionHome">
         <div className="containerHome">
             <div className="imageHome">
-                <article className="FormHome">
-                    <div className="Formulario">
-                        <div className="TitulosHome">
-                        <h1 className="title1">Olá!</h1>
-                        <h1 className="title1">Seja bem vindo de volta.</h1>
-                        </div>                       
-                        <p className="pLogin">Faça o seu login</p>
-                        <div className="containerInputs">
-                        <input placeholder="E-mail" className="InputFormHome"></input>
-                        <input placeholder="Senha" type="password" className="InputFormHome"></input>
-                        <p className="pLogin2">Esqueceu a sua senha? <a href="#" className="linkHome">Clique Aqui</a></p>
-                        </div>
-                        <div className="DivButton">
-                        <Link to='/navigation' className="linkbutton">Login</Link>
-                            {/* <button className="buttonLogin">Login</button> */}
-                        </div>
-                    </div>
-                </article>                
+            <div className="login-form">
+          <h1>Olá!</h1>
+          <h1>Seja bem vindo de volta.</h1>
+          <p>Faça o seu login!</p>
+          <form>
+            <label htmlFor="email">e-mail</label>
+            <input type="email" id="email" name="email" required />
+            <label htmlFor="password">senha</label>
+            <input type="password" id="password" name="password" required />
+            <a href="#" className="forgot-password">Esqueceu a sua senha?</a>
+            <Link type="submit" to='/navigation'className="ButtonLoginLink">Login</Link>
+          </form>
+        </div>          
             </div>
            
         </div>
