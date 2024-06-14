@@ -1,9 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
-import imgHome from "./images/people2.png";
 import laptop from "./images/laptop.png";
 import grafic from "./images/grafic.png"
 import LogoPrevac from "./images/logoPrevac.png"
-import LogoPrevac2 from "./images/LogoPrevac2.png"
+import LogoPrevac2 from "./images/people.png"
 import Cards from "./components/cards/Cards";
 import Footer from "../Components/Footer/Footer";
 import "./home.css";
@@ -29,22 +28,32 @@ function Home() {
 
     </div>
     </nav>
-    <section className="landingPage">
-        <div className="titulos">
+    <section className="homePage">
+        <div className="container-homePage">
 
-            <h1 className="titleHome1">Monitoramento inteligente, prevenção eficiente!</h1>
-            <p className="sub-titleHome">Nossa missão é assegurar a saúde e integridade
+          <div className="contentHome">
+            <h1 className="titleHomePage">Monitoramento inteligente, prevenção eficiente!</h1>
+            <p className="descriptionPageHome">
+            Nossa missão é assegurar a saúde e integridade
                  física dos colaboradores, além de proteger a empresa 
-                 de possíveis penalizações.</p>
+                 de possíveis penalizações.
+            </p>
+           <Link to='/Registration' className="buttonHome-a">COMEÇAR</Link>
+          </div>
 
-                 <Link to='/configuracoes' className="buttonLandingPage">FAÇA PARTE</Link>
+          <div className="image-containerHomePage">
+            <div className="imagePage">
+              <img src={LogoPrevac2} alt="home image" />
+            </div>
+            <div className="ellipse-container">
+              <div className="ellipse blue"></div>
+            
+            </div>
+          </div>
+
 
         </div>
-        <div className="imglandingpage">
-            <img src={LogoPrevac2} alt="People"  className="people" />
-        </div>
-       
-    </section>
+      </section>
     {/* Componente de cards */}
     <Cards/>
     <main className="Main-Section3">

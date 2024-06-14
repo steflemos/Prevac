@@ -1,5 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
+.homePage {
+    padding: 5rem 0 0.5rem 0;
+}
+
+.container-homePage {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.image-containerHomePage {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+.imagePage {
+    img {
+      width: 570px;
+    }
+  }
+
+  .ellipse-container {
+    .ellipse {
+      z-index: -1;
+      position: absolute;
+      height: 15rem;
+      width: 15rem;
+      filter: blur(100px);
+    }
+
+    .blue {
+     width: 600px;
+     height: 500px;
+      top: 20%;
+      right: 0%;
+      background-color:#0066cc81;
+    }
+  }
+
+
+  .contentHome {
+    align-items: flex-start;
+    max-width: 37rem;
+  }
+
+  .titleHomePage {
+    font-family:  "Abel", sans-serif;
+    color: #fff;
+    font-size: 3.4rem;
+    margin-bottom: 2rem;
+    line-height: 4rem;
+  }
+
+  .descriptionPageHome {
+    font-family:  "Abel", sans-serif;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    margin: 10px 0px 0px;
+    margin-bottom: 3rem;
+  }
+
+  .buttonHome-a {
+    display: inline-block;
+    background-color: #0066cc;
+    padding: 12px 36px;
+    font-size: 1.2rem;
+  
+    border: none;
+    border-radius: 17px;
+    color: #fff;
+    text-decoration: none;
+    font-family:  "Abel", sans-serif;
+    transition: all 0.5s;
+  }
+
+
+/*  ------------------------------------------*/
 
 .HomeLandingPage{
     font-family: "Abel", sans-serif;
@@ -52,45 +131,7 @@
 
 
 
-/* header {
-    padding: 50px;
-    text-align: center;
-} */
 
-.landingPage{
-    height: 100vh;
-    width: 100%;
-    margin: 0;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.imglandingpage{
-    width: 36%;
-}
-
-.people{
-    width: 100%;
-}
-
-.titulos{
-  
-    width: 35%;
-
-}
-
-
-.titleHome1{
-      font-family: "Abel", sans-serif;
-    text-decoration: none !important;
-    padding: 0;
-    margin: 0;
-    font-size: 3em;
-    line-height: 1em;
-    font-weight: 200;
-}
 .titleHome2{
     font-family: "Abel", sans-serif;
     text-decoration: none !important;
@@ -100,25 +141,7 @@
     line-height: 1em;
     font-weight: 200;
 }
-.sub-titleHome{
-    padding: 20px 0;
-    font-family: "Abel", sans-serif;
-    font-weight: 200;
-    font-size: 1.5em;
-}
 
-.buttonLandingPage{
-    padding: 10px 20px !important;
-    text-decoration: none;
-    background-color: #0066cc;
-    width: 35%;
-    padding: 10px 0;
-    border: none;
-    color: #fff;
-    border-radius: 20px;
-    font-family: "Abel", sans-serif; 
-    font-size: 1.2em;
-}
 
 
 /* sessão 3 */
