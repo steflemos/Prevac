@@ -17,18 +17,13 @@ function Home() {
             <img src={LogoPrevac} alt="People"  className="logoPrevac" />
         </div>
         <div className="optionsHeader">
-
-            <a href="#home" className="optionSelect" >Home</a>
-
-           <a  href="#recursos" className="optionSelect">Serviços</a>
-
-            <a href="#contrate"className="optionSelect">Sobre</a>
-
-            <Link to='/login' className="optionSelect2">Login</Link>
-
-    </div>
+                        <a href="#recursos" className="optionSelect">Serviços</a>
+                        <a href="#sobre" className="optionSelect">Sobre</a>
+                        <a href="#como-funciona" className="optionSelect">Como Funciona</a>
+                        <Link to='/login' className="optionSelect2">Login</Link>
+                    </div>
     </nav>
-    <section className="homePage">
+    <section  id="home" className="homePage">
         <div className="container-homePage">
 
           <div className="contentHome">
@@ -55,9 +50,11 @@ function Home() {
         </div>
       </section>
     {/* Componente de cards */}
-    <Cards/>
+    <section  id="recursos">
+      <Cards/>
+    </section>
   
-<section className="homePage">
+<section  id="sobre" className="homePage">
         <div className="container-homePage">
         <div className="image-containerHomePage">
             <div className="imagePage">
@@ -79,7 +76,7 @@ function Home() {
         </div>
       </section>
 
-<section className="homePage4">
+<section id="como-funciona" className="homePage4">
         <div className="container-homePage">
 
           <div className="contentHome">
