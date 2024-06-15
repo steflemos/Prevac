@@ -1,34 +1,96 @@
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
-import "./login.css"
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./login.css";
 
-const Login  = () => {
-    return(
-<body className="bodyhome">
-    <section className="sectionHome">
-        <div className="containerHome">
-            <div className="imageHome">
-            <div className="login-form">
-          <h1>Olá!</h1>
-          <h1>Seja bem vindo de volta.</h1>
-          <p>Faça o seu login!</p>
-          <form>
-            <label htmlFor="email">e-mail</label>
-            <input type="email" id="email" name="email" required />
-            <label htmlFor="password">senha</label>
-            <input type="password" id="password" name="password" required />
-            <a href="#" className="forgot-password">Esqueceu a sua senha?</a>
-            <Link type="submit" to='/navigation'className="ButtonLoginLink">Login</Link>
-          </form>
-        </div>          
-            </div>
-           
-        </div>
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
 
-    </section>
-    
-</body>
 
-    )
-}
+
+const Login = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
+    const [errors, setErrors] = useState({});
+    const navigate = useNavigate();
+
+    const validate = () => {
+        const errors = {};
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!email) {
+            errors.email = 'E-mail é obrigatório';
+        } else if (!emailRegex.test(email)) {
+            errors.email = 'Formato de e-mail inválido';
+        }
+
+        if (!password) {
+            errors.password = 'Senha é obrigatória';
+        } else if (password.length < 8) {
+            errors.password = 'Senha deve ter pelo menos 8 caracteres';
+        }
+
+        setErrors(errors);
+        return Object.keys(errors).length === 0;
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (validate()) {
+            navigate('/dashboard');
+        }
+    };
+
+    const toggleShowPassword = () => {
+        setShowPassword(!showPassword);
+    };
+
+    return (
+        <body className="bodyhome">
+            <section className="sectionHome">
+                <div className="containerHome">
+                    <div className="imageHome">
+                        <div className="login-form">
+                            <h1>Olá!</h1>
+                            <h1>Seja bem vindo de volta.</h1>
+                            <p className="Logintext">Faça o seu login!</p>
+                            <form onSubmit={handleSubmit}>
+                                <label htmlFor="email">e-mail</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    value={email} 
+                                    onChange={(e) => setEmail(e.target.value)} 
+                                    required 
+                                />
+                                {errors.email && <p className="error">{errors.email}</p>}
+
+                                <label htmlFor="password">senha</label>
+                                <div className="password-container">
+                                    <input 
+                                        type={showPassword ? "text" : "password"} 
+                                        id="password" 
+                                        name="password" 
+                                        value={password} 
+                                        onChange={(e) => setPassword(e.target.value)} 
+                                        required 
+                                    />
+                                    <span className="toggle-password" onClick={toggleShowPassword}>
+                                        {showPassword ? <FaEye className="Eye"/> :<FaEyeSlash className="Eye"/>}
+                                    </span>
+                                </div>
+                                {errors.password && <p className="error">{errors.password}</p>}
+
+                                <a href="#" className="forgot-password">Esqueceu a sua senha?</a>
+                                <button type="submit" className="ButtonLoginLink">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </body>
+    );
+};
+
 export default Login;

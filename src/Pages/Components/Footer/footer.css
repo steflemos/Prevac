@@ -21,7 +21,7 @@
 }
 
 .logoPrevacFooter {
-    width: 100px;
+    width: 200px;
 }
 
 .contact-section, .company-section {
@@ -43,5 +43,4 @@
     font-weight: 500;
     font-size: 1.2em;
     font-family: "Abel", sans-serif;
-    margin: 1em 0;
 }

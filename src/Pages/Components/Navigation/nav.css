@@ -1,67 +1,64 @@
+/* nav.css */
 
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Outfit', sans-serif;
 }
 
-.BodyNav{
-    height: 100vh;
-}
 
-.menu-lateral{
+
+.menu-lateral {
     width: 80px;
     height: 100%;
     background-color: #0C4F6C;
     padding: 40px 0 40px 1%;
-
     position: fixed;
     top: 0;
     left: 0;
     overflow: hidden;
     transition: .5s;
+    z-index: 1000; /* Adiciona z-index alto */
 }
 
-.menu-lateral.expandir{
+.menu-lateral.expandir {
     width: 260px;
 }
 
-.btn-expandir{
+.btn-expandir {
     width: 100%;
     padding-left: 15px;
     padding-bottom: 30px;
 }
 
-.btn-expandir > i{
+.btn-expandir > i {
     color: #fff;
     font-size: 24px;
     cursor: pointer;
 }
 
-.ulNave{
+.ulNav {
     height: 100%;
     list-style-type: none;
 }
 
-.item-menu{
+.item-menu {
     transition: .2s;
     list-style-type: none;
-
 }
 
-.ativo{
+.ativo {
     background-color: #02BAEE;
     border-radius: 10px 0px 0px 10px;
 }
 
-.item-menu:hover{
+.item-menu:hover {
     background: #02bbee31;
     border-radius: 10px 0px 0px 10px;
 }
 
-.aLinkNav{
+.aLinkNav {
     color: #fff;
     text-decoration: none;
     font-size: 1.2em;
@@ -69,24 +66,23 @@
     display: flex;
     margin-bottom: 20px;
     line-height: 40px;
-
 }
 
-.txt-link{
+.txt-link {
     margin-left: 70px;
     transition: .5s;
     opacity: 0;
 }
 
-.menu-lateral.expandir .txt-link{
+.menu-lateral.expandir .txt-link {
     margin-left: 20px;
     opacity: 1;
 }
 
- .icon {
+.icon {
     font-size: 28px;
     margin-left: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-} 
+}

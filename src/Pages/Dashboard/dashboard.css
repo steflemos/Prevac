@@ -1,107 +1,113 @@
+/* dashboard.css */
 
-  .dashboard-container {
-    display: flex;
-  }
-  
- 
-  .main-content {
-    flex-grow: 1;
-    padding: 20px;
-    background-color: #ffffff;
-  }
-  
-  .headerDashboard {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 20px;
-  }
-  
-  .header-title {
-    font-size: 24px;
-  }
-  
-  .notification {
-    position: relative;
-  }
-  
-  .notification-badge {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    background-color: red;
-    color: white;
-    border-radius: 50%;
-    padding: 5px 10px;
-    font-size: 14px;
-  }
-  
-  .notification-button {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
-  .alert-button {
-    background-color: #ff4d4d;
-    border: none;
-    padding: 10px 20px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .alert-button:hover {
-    background-color: #ff1a1a;
-  }
-  
-  .sensor-status {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-  }
-  
-  .status-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #b0ff9d;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .status-title {
-    margin: 0;
-    font-size: 20px;
-  }
-  
-  .status-ok {
-    font-size: 24px;
-    color: green;
-  }
-  
-  .sensor-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  .sensor-table-header {
-    background-color: #f2f2f2;
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  .sensor-table-row:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  .sensor-table-cell {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
+.dashboard-container {
+  display: flex;
+  transition: margin-left .5s; /* Transição para a margem */
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  margin-left: 80px; /* Margin para quando o menu está fechado */
+  transition: margin-left .5s; /* Adiciona transição suave */
+}
+
+.menu-lateral.expandir ~ .dashboard-container .main-content {
+  margin-left: 260px; /* Margin para quando o menu está expandido */
+}
+
+.headerDashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.header-title {
+  font-size: 24px;
+}
+
+.notification {
+  position: relative;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.notification-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.alert-button {
+  background-color: #ff4d4d;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.alert-button:hover {
+  background-color: #ff1a1a;
+}
+
+.sensor-status {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b0ff9d;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.status-title {
+  margin: 0;
+  font-size: 20px;
+}
+
+.status-ok {
+  font-size: 24px;
+  color: green;
+}
+
+.sensor-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.sensor-table-header {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.sensor-table-row:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.sensor-table-cell {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}

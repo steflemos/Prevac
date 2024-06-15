@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 body{
     margin: 0;
-
 }
 .bodyhome{
     position: relative; 
@@ -44,14 +43,31 @@ body{
     justify-content: flex-end;
 }
 
+/* estilo da mensagem de erro */
+.error {
+  color: red;
+  font-size: 1em;
+  font-family: "Abel", sans-serif;
+  margin-top: 10px;
+}
 
+/*olho senha*/
+
+.Eye{
+  width: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    margin-right: 10px;
+    color: #0c4f6c;
+}
 
 /* ------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
- 
 
-  .login-form {
+.login-form {
     border-radius: 70px  10px 70px 10px;
     width: 50%;
     background-color: #fff;
@@ -59,54 +75,72 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
+}
   
-  .login-form h1 {
+.login-form h1 {
     font-family: "Abel", sans-serif;
     margin: 0;
     font-size: 2em;
     color: #0C4F6C;
-  }
-
+}
   
-  .login-form p {
+.Logintext {
     font-family: "Abel", sans-serif;
     margin-top: 10px;
     font-size: 1.4em;
     color: #666;
-  }
+}
   
-  .login-form form {
+.login-form form {
     display: flex;
     flex-direction: column;
-  }
+}
   
-  .login-form label {
+.login-form label {
     margin-top: 15px;
     font-size: 14px;
     color: #0C4F6C;
-  }
+}
   
-  .login-form input {
+.login-form input {
     margin-top: 5px;
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ddd;
     border-radius: 5px;
-  }
+}
   
-  .forgot-password {
+.password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.password-container input {
+    flex: 1;
+}
+
+.toggle-password {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+}
+
+.forgot-password {
     margin-top: 10px;
     font-size: 13px;
     color: #00bfff;
     text-decoration: none;
-  }
+}
   
-  .forgot-password:hover {
+.forgot-password:hover {
     text-decoration: underline;
-  }
+}
   
-  .ButtonLoginLink{
+.ButtonLoginLink{
     text-align: center;
     text-decoration: none;
     margin-top: 20px;
@@ -117,9 +151,8 @@ body{
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
+}
   
-  .ButtonLoginLink:hover {
+.ButtonLoginLink:hover {
     background-color: #0e5f81;
-  }
-  
+}
