@@ -1,17 +1,30 @@
 import "./nav.css";
-import { FaBars } from "react-icons/fa";
-import { FaHome } from "react-icons/fa";
+import { FaBars, FaHome, FaUserCircle, FaSignOutAlt } from "react-icons/fa";
 import { MdAssessment } from "react-icons/md";
 import { IoSettingsSharp } from "react-icons/io5";
-import { FaUserCircle } from "react-icons/fa";
-
-
-
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 function Navigationteste() {
+    const navigate = useNavigate();
+    const [showConfirm, setShowConfirm] = useState(false);
+
+    const handleLogoutClick = (e) => {
+        e.preventDefault();
+        setShowConfirm(true);
+    };
+
+    const handleConfirmLogout = () => {
+        setShowConfirm(false);
+        navigate('/');
+    };
+
+    const handleCancelLogout = () => {
+        setShowConfirm(false);
+    };
+
     return (
       <div>
-        <>
         <div className="BodyNav">
             <nav className="menu-lateral">
                 <div className="btn-expandir">
@@ -43,15 +56,26 @@ function Navigationteste() {
                             <span className="txt-link">Conta</span>
                         </a>
                     </li>
+                    <li className="item-menu">
+                        <a href="/" className="aLinkNav" onClick={handleLogoutClick}>
+                            <span className="icon2"><FaSignOutAlt /></span>
+                            <span className="txt-link">Sair</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
-        
-        </>
-        
-        
+        {showConfirm && (
+            <div className="confirm-popup">
+                <div className="confirm-popup-content">
+                    <p>Você tem certeza que deseja sair?</p>
+                    <button onClick={handleConfirmLogout}>Sim</button>
+                    <button onClick={handleCancelLogout}>Não</button>
+                </div>
+            </div>
+        )}
       </div>
     );
-  }
-  
-  export default Navigationteste;
+}
+
+export default Navigationteste;

@@ -1,4 +1,5 @@
-/* nav.css */
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
 
 * {
     margin: 0;
@@ -6,8 +7,6 @@
     box-sizing: border-box;
     font-family: 'Outfit', sans-serif;
 }
-
-
 
 .menu-lateral {
     width: 80px;
@@ -85,4 +84,74 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.icon2 {
+    color: rgb(212, 212, 212);
+    font-size: 28px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para o pop-up de confirmação */
+
+.confirm-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Certifique-se de que o pop-up fique acima de outros elementos */
+}
+
+.confirm-popup-content {
+
+    background-color: #ffffff;
+    border: 1px solid #000;
+    padding: 40px;
+    color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.confirm-popup-content p {
+    font-family: 'Abel', sans-serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+}
+
+.confirm-popup-content button {
+    font-family: 'Abel', sans-serif;
+    margin: 0 10px;
+    padding: 7px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.confirm-popup-content button:first-of-type {
+    background-color: #02BAEE;
+    color: white;
+}
+
+.confirm-popup-content button:first-of-type:hover {
+    background-color: #0c7592;
+}
+
+.confirm-popup-content button:last-of-type {
+    background-color: #ccc;
+    color: #333;
+}
+
+.confirm-popup-content button:last-of-type:hover {
+    background-color: #b9b9b9;
 }
