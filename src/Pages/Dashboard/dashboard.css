@@ -1,70 +1,27 @@
+/* dashboard.css */
+
 .dashboard-container {
   display: flex;
-  transition: margin-left .5s; /* Transição para a margem */
+  transition: margin-left .5s;
 }
+
 .main-content {
   flex-grow: 1;
   padding: 20px;
   background-color: #ffffff;
-  margin-left: 80px; 
-  transition: margin-left .5s; 
+  margin-left: 80px;
+  transition: margin-left .5s;
 }
 
-.menu-lateral.expandir ~ .dashboard-container {
-  margin-left: 260px; 
+.menu-lateral.expandir ~ .dashboard-container .main-content {
+  margin-left: 260px;
 }
 
-.headerDashboard {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 20px;
-}
-
-.header-title {
-  font-size: 24px;
-}
-
-.notification {
-  position: relative;
-}
-
-.notification-badge {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background-color: red;
-  color: white;
-  border-radius: 50%;
-  padding: 5px 10px;
-  font-size: 14px;
-}
-
-.notification-button {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.alert-button {
-  background-color: #ff4d4d;
-  border: none;
-  padding: 10px 20px;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.alert-button:hover {
-  background-color: #ff1a1a;
-}
 
 .sensor-status {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
-  margin-top: 20px;
 }
 
 .status-header {
@@ -108,3 +65,24 @@
   padding: 8px;
   text-align: left;
 }
+
+.buttons-dashboard {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.Button-sensors {
+  padding: 10px 20px;
+  background-color: #dfdfdf;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Button-sensors:hover {
+  color: #fff;
+  background-color: #9b9b9b;
+}
+
