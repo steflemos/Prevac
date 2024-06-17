@@ -7,6 +7,7 @@
 
 /* Estilos para o container dos cards */
 .card-container {
+  margin: 0 10%;
   padding: 50px;
   border-radius: 0.5rem;
 }

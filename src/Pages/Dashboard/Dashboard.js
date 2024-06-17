@@ -1,12 +1,11 @@
-/* Dashboard.js */
 import React from 'react';
-import Navigation from '../../Pages/Components/Navigation/menuNav'; // Importa o Navigation aqui
+import Navigation from '../../Pages/Components/Navigation/menuNav';
 import './dashboard.css';
 
 function Dashboard() {
   return (
     <>
-      <Navigation /> {/* Adiciona o componente Navigation aqui */}
+      <Navigation /> 
       <div className="dashboard-container">
         <main className="main-content">
           <header className="headerDashboard">
@@ -44,30 +43,7 @@ function Dashboard() {
                   <td className="sensor-table-cell">26C</td>
                   <td className="sensor-table-cell"></td>
                 </tr>
-                <tr className="sensor-table-row">
-                  <td className="sensor-table-cell">Sensor 1</td>
-                  <td className="sensor-table-cell">1gd</td>
-                  <td className="sensor-table-cell">22C</td>
-                  <td className="sensor-table-cell">15C</td>
-                  <td className="sensor-table-cell">26C</td>
-                  <td className="sensor-table-cell"></td>
-                </tr>
-                <tr className="sensor-table-row">
-                  <td className="sensor-table-cell">Sensor 1</td>
-                  <td className="sensor-table-cell">1gd</td>
-                  <td className="sensor-table-cell">22C</td>
-                  <td className="sensor-table-cell">15C</td>
-                  <td className="sensor-table-cell">26C</td>
-                  <td className="sensor-table-cell"></td>
-                </tr>
-                <tr className="sensor-table-row">
-                  <td className="sensor-table-cell">Sensor 1</td>
-                  <td className="sensor-table-cell">1gd</td>
-                  <td className="sensor-table-cell">22C</td>
-                  <td className="sensor-table-cell">15C</td>
-                  <td className="sensor-table-cell">26C</td>
-                  <td className="sensor-table-cell"></td>
-                </tr>
+                {/* Outras linhas da tabela */}
               </tbody>
             </table>
           </section>

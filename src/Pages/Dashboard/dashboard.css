@@ -1,20 +1,17 @@
-/* dashboard.css */
-
 .dashboard-container {
   display: flex;
   transition: margin-left .5s; /* Transição para a margem */
 }
-
 .main-content {
   flex-grow: 1;
   padding: 20px;
   background-color: #ffffff;
-  margin-left: 80px; /* Margin para quando o menu está fechado */
-  transition: margin-left .5s; /* Adiciona transição suave */
+  margin-left: 80px; 
+  transition: margin-left .5s; 
 }
 
-.menu-lateral.expandir ~ .dashboard-container .main-content {
-  margin-left: 260px; /* Margin para quando o menu está expandido */
+.menu-lateral.expandir ~ .dashboard-container {
+  margin-left: 260px; 
 }
 
 .headerDashboard {
