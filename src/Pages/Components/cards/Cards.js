@@ -34,6 +34,14 @@ function Cards() {
             <p className="card-description">
             Nosso sistema pode ser facilmente integrado com dispositivos IOT </p>
           </div>
+          <div className="card-content">
+            <div className="card-image">
+              <img src={Icon2} alt="negotiate" width={'100px'} />
+            </div>
+            <h2 className="card-title">Integrações com Dispositivos IOT</h2>
+            <p className="card-description">
+            Nosso sistema pode ser facilmente integrado com dispositivos IOT </p>
+          </div>
         </div>
       </div>
     </div>

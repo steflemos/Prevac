@@ -34,13 +34,14 @@
 }
 
 .footer-bottom {
-    background-color: #00aeef;
+    background-color: #e4e3e3;
     color: #ffffff;
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 
 .sub-title-footer{
+    color: #000000;
     font-weight: 500;
-    font-size: 1.2em;
+    font-size: 1em;
     font-family: "Abel", sans-serif;
 }
