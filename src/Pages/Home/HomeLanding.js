@@ -23,7 +23,10 @@ function Home() {
       <section id="como-funciona" className="homePage4">
         <Section3/>
       </section>
+      <section id="footer">
       <Footer />
+      </section>
+      
     </div>
   );
 }

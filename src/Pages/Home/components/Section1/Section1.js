@@ -1,6 +1,8 @@
 import Icon1 from "../../../../imagens/icon1.png";
 import Icon2 from "../../../../imagens/icon2.png";
 import Icon3 from "../../../../imagens/icon3.png";
+import Icon4 from "../../../../imagens/icon4.png";
+
 import "../Section1/Section1.css"
 
 function Section1() {
@@ -36,11 +38,12 @@ function Section1() {
           </div>
           <div className="card-content">
             <div className="card-image">
-              <img src={Icon2} alt="negotiate" width={'100px'} />
+              <img src={Icon4} alt="negotiate" width={'100px'} />
             </div>
-            <h2 className="card-title">Integrações com Dispositivos IOT</h2>
+            <h2 className="card-title">Segurança Avançada</h2>
             <p className="card-description">
-            Nosso sistema pode ser facilmente integrado com dispositivos IOT </p>
+            Implementamos medidas de segurança avançadas para proteger seus dados e sistemas contra ameaças.
+            </p>
           </div>
         </div>
       </div>

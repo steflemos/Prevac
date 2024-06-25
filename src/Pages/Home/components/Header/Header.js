@@ -62,6 +62,7 @@ function Header() {
             <a href="#recursos" className="optionSelect">Serviços</a>
             <a href="#sobre" className="optionSelect">Sobre</a>
             <a href="#como-funciona" className="optionSelect">Como Funciona</a>
+            <a href="#footer" className="optionSelect">Contato</a>
             <Link to="/login" className="optionSelect2">Login</Link>
           </div>
         </nav>

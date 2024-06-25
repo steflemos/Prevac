@@ -1,14 +1,15 @@
-
-import AppRoutes from './routes/Routes';
-import GlobalStyle from "./Styles/global";
-
-
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import AppRoutes from './routes/AppRoutes';
+import GlobalStyle from './Styles/global';
+import { AuthProvider } from '/Users/tiagosilva/Desktop/sitePrevac/Prevac/src/Pages/Login/AuthContext.js'; 
 function App() {
   return (
-    <div>
-       <GlobalStyle />
-      <AppRoutes/>
-    </div>
+    <AuthProvider>
+      <GlobalStyle />
+      <AppRoutes />
+    </AuthProvider>
   );
 }
 
