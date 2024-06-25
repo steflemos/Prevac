@@ -33,22 +33,21 @@ function Navigationteste() {
           </div>
           <ul className="ulNav">
             <li className="item-menu ativo">
-              <a className="aLinkNav" href="#">
+              <Link className="aLinkNav" to="/dashboard">
                 <span className="icon">
                   {" "}
                   <FaHome className="home" />
                 </span>
                 <span className="txt-link">Home</span>
-              </a>
+              </Link>
             </li>
-
             <li className="item-menu">
-              <a className="aLinkNav" href="#">
+              <Link className="aLinkNav" to="/usersettings">
                 <span className="icon">
                   <IoSettingsSharp />
                 </span>
                 <span className="txt-link">Configurações</span>
-              </a>
+              </Link>
             </li>
             <li className="item-menu">
               <a href="/" className="aLinkNav" onClick={handleLogoutClick}>

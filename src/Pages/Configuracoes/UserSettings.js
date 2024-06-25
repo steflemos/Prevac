@@ -1,52 +1,44 @@
-import React, { useEffect, useState } from "react";
-import {
-  auth,
-  firestore,
-} from "/Users/tiagosilva/Desktop/sitePrevac/Prevac/src/Pages/Login/firebase-config.js";
-import "./UserSettings.css";
+import React, { useEffect, useState } from 'react';
+import { auth, db } from '/Users/tiagosilva/Desktop/sitePrevac/Prevac/src/Pages/Login/firebase-config.js';
+import './UserSettings.css'; 
 
 const UserSettings = () => {
-  const [user, setUser] = useState(null);
-  const [userData, setUserData] = useState({});
+  const [userData, setUserData] = useState(null);
 
   useEffect(() => {
     const fetchUserData = async () => {
-      const currentUser = auth.currentUser;
-      if (currentUser) {
-        setUser(currentUser);
-        const userDoc = await firestore
-          .collection("users")
-          .doc(currentUser.uid)
-          .get();
-        if (userDoc.exists) {
-          setUserData(userDoc.data());
+      const user = auth.currentUser;
+      console.log('Usuário atual:', user); // Verifica se o usuário está autenticado
+      if (user) {
+        try {
+          const userDoc = await db.collection('users').doc(user.uid).get();
+          console.log('Dados do documento do usuário:', userDoc.data()); // Verifica os dados do documento
+          if (userDoc.exists) {
+            setUserData(userDoc.data());
+          } else {
+            console.log('Documento de usuário não encontrado.');
+          }
+        } catch (error) {
+          console.error('Erro ao buscar dados do usuário:', error);
         }
+      } else {
+        console.log('Usuário não autenticado.');
       }
     };
+
     fetchUserData();
   }, []);
 
+  if (!userData) {
+    return <p>Carregando...</p>; 
+  }
+
   return (
-    <div className="user-settings-container">
-      {user ? (
-        <div className="user-info">
-          <h2>Configurações do Usuário</h2>
-          <p>
-            <strong>Nome Completo:</strong> {userData.fullName}
-          </p>
-          <p>
-            <strong>Função:</strong> {userData.role}
-          </p>
-          <p>
-            <strong>Email:</strong> {user.email}
-          </p>
-          <p>
-            <strong>Senha:</strong> ••••••••
-          </p>
-        </div>
-      ) : (
-        <p>Carregando informações do usuário...</p>
-      )}
+    <div className="user-settings">
+      <h2>Configurações do Usuário</h2>
+      <p><strong>Nome:</strong> {userData.nome}</p>
+      <p><strong>Função:</strong> {userData.funcao}</p>
+      <p><strong>Email:</strong> {userData.email}</p>
     </div>
   );
 };
