@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from '../Pages/Login/Login';
 import Home from '../Pages/Home/HomeLanding';
-import UserSettings from '/Users/tiagosilva/Desktop/sitePrevac/Prevac/src/Pages/Configuracoes/UserSettings.js';
+import UserSettings from '../Pages/Configuracoes/UserSettings';
 import Navigation from '../Pages/Components/Navigation/menuNav';
 import Dashboard from '../Pages/Dashboard/Dashboard';
 

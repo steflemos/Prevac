@@ -19,13 +19,15 @@ function Section2() {
           Protegendo o Futuro da Segurança do Trabalho
         </h1>
         <p className="descriptionPageHome2">
-          Descubra o <strong>PREVAC</strong>, o sistema revolucionário de monitoramento de
+          Descubra o PREVAC, o sistema revolucionário de monitoramento de
           segurança para fábricas. Utilizando sensores de última geração e
           câmeras inteligentes, o PREVAC identifica riscos em tempo real, emite
-          alertas instantâneos e gera relatórios detalhados. <br>
-           
+          alertas instantâneos e gera relatórios detalhados. 
+          <br> 
           </br>
-          Com o PREVAC, você cria um ambiente de trabalho não apenas seguro, mas também altamente
+          <br>
+          </br>
+          Com ele, você cria um ambiente de trabalho não apenas seguro, mas também altamente
           eficiente, atendendo rigorosamente às normas regulamentadoras. Reduza
           custos operacionais, evite acidentes e aumente a satisfação dos seus
           funcionários. Invista na segurança e veja a produtividade da sua

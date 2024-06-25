@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { auth, db } from '/Users/tiagosilva/Desktop/sitePrevac/Prevac/src/Pages/Login/firebase-config.js';
+import { auth, db } from '../Login/firebase-config';
 import './UserSettings.css'; 
 
 const UserSettings = () => {
