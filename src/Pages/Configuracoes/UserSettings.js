@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { auth, db } from '/Users/tiagosilva/Desktop/sitePrevac/Prevac/src/Pages/Login/firebase-config.js';
+import { auth, db } from '../Login/firebase-config.js';
 import { doc, getDoc } from 'firebase/firestore';
-import Navigation from '/Users/tiagosilva/Desktop/sitePrevac/Prevac/src/Pages/Components/Navigation/menuNav.js';
-import Configuracoes from '/Users/tiagosilva/Desktop/sitePrevac/Prevac/src/Pages/Components/Settings/CreateUserForm.js';
-import CreateUserForm from '/Users/tiagosilva/Desktop/sitePrevac/Prevac/src/Pages/Components/Settings/CreateUserForm.js';
+import Navigation from '../Components/Navigation/menuNav.js';
+import Configuracoes from '../Components/Settings/CreateUserForm.js';
+import CreateUserForm from '../Components/Settings/CreateUserForm.js';
 import './UserSettings.css'; 
-import '/Users/tiagosilva/Desktop/sitePrevac/Prevac/src/Pages/Components/Settings/CreateUserForm.css'; 
+import '../Components/Settings/CreateUserForm.css'; 
 
 const UserSettings = () => {
   const [userData, setUserData] = useState(null);

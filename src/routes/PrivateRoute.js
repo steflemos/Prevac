@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAuth } from '/Users/tiagosilva/Desktop/sitePrevac/Prevac/src/Pages/Login/AuthContext.js';
+import { useAuth } from '../Pages/Login/AuthContext';
 import { Navigate } from 'react-router-dom';
 
 const PrivateRoute = ({ children }) => {

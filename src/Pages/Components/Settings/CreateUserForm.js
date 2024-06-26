@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { auth, db } from '/Users/tiagosilva/Desktop/sitePrevac/Prevac/src/Pages/Login/firebase-config.js';
+import { auth, db } from '../../Login/firebase-config.js';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
 import './CreateUserForm.css';
