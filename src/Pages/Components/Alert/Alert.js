@@ -1,12 +1,23 @@
 import { FaBell } from "react-icons/fa";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import api from '../../../services/api'
 import "./Alert.css"
 function Alert() {
     const [isNotificationOpen, setIsNotificationOpen] = useState(false);
+    const [datas, setDatas] = useState()
 
     const toggleNotificationMenu = () => {
       setIsNotificationOpen(!isNotificationOpen);
     };
+
+
+    useEffect(() => {
+      api
+      .get("/data")
+      .then((response) => setDatas(response.data))
+      .catch((err) => {console.log("ops!")})
+    })
+
     return (
         <>
         <header className="headerDashboard">
@@ -25,17 +36,12 @@ function Alert() {
                     <span className="notification-count">4</span>
                   </div>
                   <ul className="notification-list">
-                    <li className="notification-item">Extintor próximo da validade.</li>
-                    <li className="notification-item">Formulário de incidente preenchido.</li>
-                    <li className="notification-item">Relatório de incidência pronto para análise.</li>
-                    <li className="notification-item">Relatório de incidência pronto para análise.</li>
-                    <li className="notification-item">Formulário de incidente preenchido.</li>
-                    <li className="notification-item">Formulário de incidente preenchido.</li>
-                    <li className="notification-item">Formulário de Taxa de Frequência de...</li>
-                    <li className="notification-item">Extintor próximo da validade.</li>
-                    <li className="notification-item">Relatório de incidência pronto para análise.</li>
-                    <li className="notification-item">Formulário de incidente preenchido.</li>
-                    <li className="notification-item">Formulário de incidente preenchido.</li>
+                    {
+                      datas &&
+                      datas.map((data) => (
+                        <li className="notification-item" key={data.id}>{data.status}</li>
+                      ))
+                    }
                   </ul>
                 </div>
               )}
