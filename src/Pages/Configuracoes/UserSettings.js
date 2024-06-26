@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { auth, db } from '../Login/firebase-config';
+import { auth, db } from '/Users/tiagosilva/Desktop/sitePrevac/Prevac/src/Pages/Login/firebase-config.js';
+import { doc, getDoc } from 'firebase/firestore';
+import Navigation from '/Users/tiagosilva/Desktop/sitePrevac/Prevac/src/Pages/Components/Navigation/menuNav.js';
+import Configuracoes from '/Users/tiagosilva/Desktop/sitePrevac/Prevac/src/Pages/Components/Settings/CreateUserForm.js';
+import CreateUserForm from '/Users/tiagosilva/Desktop/sitePrevac/Prevac/src/Pages/Components/Settings/CreateUserForm.js';
 import './UserSettings.css'; 
+import '/Users/tiagosilva/Desktop/sitePrevac/Prevac/src/Pages/Components/Settings/CreateUserForm.css'; 
 
 const UserSettings = () => {
   const [userData, setUserData] = useState(null);
@@ -11,9 +16,10 @@ const UserSettings = () => {
       console.log('Usuário atual:', user); // Verifica se o usuário está autenticado
       if (user) {
         try {
-          const userDoc = await db.collection('users').doc(user.uid).get();
+          const userDocRef = doc(db, 'users', user.uid);
+          const userDoc = await getDoc(userDocRef);
           console.log('Dados do documento do usuário:', userDoc.data()); // Verifica os dados do documento
-          if (userDoc.exists) {
+          if (userDoc.exists()) {
             setUserData(userDoc.data());
           } else {
             console.log('Documento de usuário não encontrado.');
@@ -30,15 +36,24 @@ const UserSettings = () => {
   }, []);
 
   if (!userData) {
-    return <p>Carregando...</p>; 
+    return <p>Carregando...</p>;
   }
 
   return (
-    <div className="user-settings">
-      <h2>Configurações do Usuário</h2>
-      <p><strong>Nome:</strong> {userData.nome}</p>
-      <p><strong>Função:</strong> {userData.funcao}</p>
-      <p><strong>Email:</strong> {userData.email}</p>
+    <div className="user-settings-page">
+      <Navigation />
+    
+        <Configuracoes />
+        <div className="user-settings-content">
+          <div className="user-settings">
+            <h2>Configurações do Usuário</h2>
+            <p><strong>Nome:</strong> {userData.nome}</p>
+            <p><strong>Função:</strong> {userData.funcao}</p>
+            <p><strong>Email:</strong> {userData.email}</p>
+          </div>
+          {userData.permissao === 'adm' && <CreateUserForm />}
+        </div>
+  
     </div>
   );
 };

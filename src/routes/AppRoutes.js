@@ -15,6 +15,9 @@ const AppRoutes = () => {
         <Route path="/navigation" element={<Navigation />} />
         <Route path="/usersettings" element={<UserSettings />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        {/* <Route path="/settings" element={<Settings />} /> */}
+        {/* <Route path="/configuracoes/usuarios" element={<UserPermissions />} />
+        <Route path="/configuracoes/notificacoes" element={<NotificationsAlerts />} /> */}
       </Routes>
     </Router>
   );
