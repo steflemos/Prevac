@@ -2,15 +2,18 @@ import React, {  } from 'react';
 import Navigation from '../../Pages/Components/Navigation/menuNav';
 import './dashboard.css';
 import Alert from '../Components/Alert/Alert';
+import { format } from 'date-fns';
 
-function Dashboard() {
+
+function Dashboard({ datas }) {
+
 
   return (
     <>
       <Navigation /> 
       <div className="dashboard-container">
         <main className="main-content">
-      <Alert/>
+      <Alert datas={datas}/>
           <section className="sensor-status">
             <div className="buttons-dashboard">
               <button className='Button-sensors'>Sensores de Temperatura</button>
@@ -24,54 +27,28 @@ function Dashboard() {
             <table className="sensor-table">
               <thead>
                 <tr>
-                  <th className="sensor-table-header">Sensor</th>
                   <th className="sensor-table-header">Id</th>
-                  <th className="sensor-table-header">Ultimo registro</th>
-                  <th className="sensor-table-header">Min.</th>
-                  <th className="sensor-table-header">Max.</th>
-                  <th className="sensor-table-header">Configurações</th>
+                  <th className="sensor-table-header">Pressure</th>
+                  <th className="sensor-table-header">Temperature</th>
+                  <th className="sensor-table-header">Status</th>
+                  <th className="sensor-table-header">Data</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="sensor-table-row">
-                  <td className="sensor-table-cell">Sensor 1</td>
-                  <td className="sensor-table-cell">1gd</td>
-                  <td className="sensor-table-cell">22C</td>
-                  <td className="sensor-table-cell">15C</td>
-                  <td className="sensor-table-cell">26C</td>
-                  <td className="sensor-table-cell"></td>
-                </tr>
+
               </tbody>
               <tbody>
-                <tr className="sensor-table-row">
-                  <td className="sensor-table-cell">Sensor 1</td>
-                  <td className="sensor-table-cell">1gd</td>
-                  <td className="sensor-table-cell">22C</td>
-                  <td className="sensor-table-cell">15C</td>
-                  <td className="sensor-table-cell">26C</td>
-                  <td className="sensor-table-cell"></td>
+                {datas.map(item => (
+                  <tr className="sensor-table-row" key={item.id}>
+                  <td className="sensor-table-cell">{item.id}</td>
+                  <td className="sensor-table-cell">{item.pressure}</td>
+                  <td className="sensor-table-cell">{item.temperature}</td>
+                  <td className="sensor-table-cell">{item.status}</td>
+                  <td className="sensor-table-cell">{format(new Date(item.timestamp), 'dd/MM/yyyy HH:mm:ss')}</td>
                 </tr>
+                  ))}
               </tbody>
-              <tbody>
-                <tr className="sensor-table-row">
-                  <td className="sensor-table-cell">Sensor 1</td>
-                  <td className="sensor-table-cell">1gd</td>
-                  <td className="sensor-table-cell">22C</td>
-                  <td className="sensor-table-cell">15C</td>
-                  <td className="sensor-table-cell">26C</td>
-                  <td className="sensor-table-cell"></td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="sensor-table-row">
-                  <td className="sensor-table-cell">Sensor 1</td>
-                  <td className="sensor-table-cell">1gd</td>
-                  <td className="sensor-table-cell">22C</td>
-                  <td className="sensor-table-cell">15C</td>
-                  <td className="sensor-table-cell">26C</td>
-                  <td className="sensor-table-cell"></td>
-                </tr>
-              </tbody>
+
             </table>
           </section>
         </main>

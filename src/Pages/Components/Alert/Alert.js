@@ -1,30 +1,21 @@
 import { FaBell } from "react-icons/fa";
-import React, { useEffect, useState } from 'react';
-import api from '../../../services/api'
+import React, { useState } from 'react';
 import "./Alert.css"
-function Alert() {
+function Alert({ datas }) {
     const [isNotificationOpen, setIsNotificationOpen] = useState(false);
-    const [datas, setDatas] = useState()
 
     const toggleNotificationMenu = () => {
       setIsNotificationOpen(!isNotificationOpen);
     };
 
-
-    useEffect(() => {
-      api
-      .get("/data")
-      .then((response) => setDatas(response.data))
-      .catch((err) => {console.log("ops!")})
-    })
-
+      
     return (
         <>
         <header className="headerDashboard">
             <h1 className="header-title">Dashboard principal</h1>
             <div className="notification-wrapper">
               <div className="notification">
-                <span className="notification-badge">4</span>
+                <span className="notification-badge">{datas.length}</span>
                 <button className="notification-button" onClick={toggleNotificationMenu}>
                  <FaBell className='iconNotification'/>
                 </button>
@@ -33,7 +24,7 @@ function Alert() {
                 <div className="notification-menu">
                   <div className="notification-header">
                     <h3>Notificações</h3>
-                    <span className="notification-count">4</span>
+                    <span className="notification-count">{datas.length}</span>
                   </div>
                   <ul className="notification-list">
                     {
