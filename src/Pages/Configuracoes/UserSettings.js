@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { auth, db } from '../Login/firebase-config.js';
 import { doc, getDoc } from 'firebase/firestore';
-import Navigation from '../Components/Navigation/menuNav.js';
-import Configuracoes from '../Components/Settings/CreateUserForm.js';
-import CreateUserForm from '../Components/Settings/CreateUserForm.js';
-import './UserSettings.css'; 
-import '../Components/Settings/CreateUserForm.css'; 
+import Navigation from '../Components/Navigation/menuNav.js'; // Certifique-se de que o caminho está correto
+import Configuracoes from '../Components/Settings/Configuracoes';
+import CreateUserForm from '../Components/Settings/CreateUserForm';
+import './UserSettings.css';
+import '../Components/Settings/CreateUserForm.css'; // Importando o CSS correto para o formulário
 
 const UserSettings = () => {
   const [userData, setUserData] = useState(null);
@@ -42,18 +42,16 @@ const UserSettings = () => {
   return (
     <div className="user-settings-page">
       <Navigation />
-    
+      <div className="user-settings-content">
         <Configuracoes />
-        <div className="user-settings-content">
-          <div className="user-settings">
-            <h2>Configurações do Usuário</h2>
-            <p><strong>Nome:</strong> {userData.nome}</p>
-            <p><strong>Função:</strong> {userData.funcao}</p>
-            <p><strong>Email:</strong> {userData.email}</p>
-          </div>
+        <div className="user-settings">
+          <h2>Configurações do Usuário</h2>
+          <p><strong>Nome:</strong> {userData.nome}</p>
+          <p><strong>Função:</strong> {userData.funcao}</p>
+          <p><strong>Email:</strong> {userData.email}</p>
           {userData.permissao === 'adm' && <CreateUserForm />}
         </div>
-  
+      </div>
     </div>
   );
 };

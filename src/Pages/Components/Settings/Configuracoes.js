@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Settings.css';
+import './Configuracoes.css';
 
 const Configuracoes = () => {
   return (
@@ -10,7 +10,7 @@ const Configuracoes = () => {
         <hr />
         <ul>
           <li>
-            <Link to="/configuracoes/usuarios">Usuário e Permissões</Link>
+            <Link to="/usersettings">Usuário e Permissões</Link>
           </li>
           <li>
             <Link to="/configuracoes/notificacoes">Notificações e alertas</Link>
