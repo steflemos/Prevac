@@ -1,4 +1,4 @@
-/* Estilos gerais para a página de configurações do usuário */
+
 .user-settings-page {
   display: flex;
   flex-direction: column;
@@ -11,6 +11,7 @@
   display: flex;
   flex: 1;
   padding: 20px;
+  margin-left: 350px; 
 }
 
 .user-settings {
@@ -34,6 +35,128 @@
 
 .user-settings strong {
   color: #0C4F6C;
+}
+
+.create-user-container {
+  width: 100%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+}
+
+.user-list-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-list-item span {
+  margin-bottom: 5px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.button-group button {
+  padding: 8px 60px;
+  background-color: #0C4F6C;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-group button:hover {
+  background-color: #093a52;
+}
+
+.create-new-user-button {
+  padding: 8px 60px;
+  background-color: #0C4F6C;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  display: flex;
+
+}
+
+.create-new-user-button:hover {
+  background-color: #093a52;
+}
+
+/* Estilos para o CreateUserForm */
+.create-user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.create-user-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.create-user-form input,
+.create-user-form select {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.create-user-form .radio-group {
+  display: flex;
+  gap: 10px; /* Espaço entre os botões de rádio */
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.create-user-form .radio-label {
+  display: flex;
+  align-items: center;
+}
+
+.create-user-form button {
+  padding: 10px;
+  background-color: #0C4F6C;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.create-user-form button:hover {
+  background-color: #093a52;
+}
+
+.create-user-form button[type="button"] {
+  background-color: #d9534f;
+}
+
+.create-user-form button[type="button"]:hover {
+  background-color: #c9302c;
 }
 
 @media (max-width: 768px) {

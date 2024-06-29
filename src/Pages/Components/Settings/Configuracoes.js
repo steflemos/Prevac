@@ -13,7 +13,7 @@ const Configuracoes = () => {
             <Link to="/usersettings">Usuário e Permissões</Link>
           </li>
           <li>
-            <Link to="/configuracoes/notificacoes">Notificações e alertas</Link>
+            <Link to="/notificacoes">Notificações e alertas</Link>
           </li>
         </ul>
       </div>
